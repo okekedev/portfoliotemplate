@@ -493,11 +493,6 @@
                     // Close this card
                     card.setAttribute('data-expanded', 'false');
                 } else {
-                    // Close all other cards first
-                    serviceCards.forEach(otherCard => {
-                        otherCard.setAttribute('data-expanded', 'false');
-                    });
-
                     // Open this card
                     card.setAttribute('data-expanded', 'true');
                 }
