@@ -1041,7 +1041,7 @@ h3 {
 
     .hero-image {
         order: 2;
-        margin-top: var(--spacing-lg);
+        margin-top: var(--spacing-2xl);
     }
 
     .hero-subtitle {
