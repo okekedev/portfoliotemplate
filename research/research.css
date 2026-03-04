@@ -86,6 +86,7 @@
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: var(--spacing-lg);
     margin-top: var(--spacing-lg);
+    align-items: start;
 }
 
 .research-card {

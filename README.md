@@ -23,17 +23,19 @@ A free, modern portfolio website template for developers, consultants, and softw
 - Subtle snowfall animation (respects `prefers-reduced-motion`)
 - Fully responsive with mobile hamburger menu
 - Two-column hero layout with image
-- Collapsible service sections
+- Independent expandable sections across all pages
+- Favicon support for browser tabs and mobile home screens
 
 ### Pages Included
 | Page | Description |
 |------|-------------|
-| **Homepage** | Hero section, services overview, featured apps, about preview |
-| **Services** | Detailed service offerings with collapsible sections |
-| **Research** | Technology focus areas and expertise |
-| **Apps** | Portfolio showcase for consumer & business apps |
-| **About** | Company story, values, and stats |
-| **Contact** | Contact form with spam protection |
+| **Homepage** | Hero section with 4 mission cards (Enhance Efficiency, Boost ROI, Create Assets, Mobilize AI), platform integration ticker, and quick actions |
+| **Services** | 4 service categories (Automation, Platform Integration, Custom Software Development, AI Mobilization) with collapsible nested service items |
+| **Research** | 6 technology focus areas (AI & ML, Cloud Architecture, Swift & Apple Platforms, DevOps, Data & Analytics, Security) with expandable details |
+| **Blog** | Article listing with featured posts and quick navigation |
+| **Apps** | 2 app categories (Business Apps, Consumer Apps) plus AI Platform section with 8+ apps showcased |
+| **About** | 3 collapsible sections (Our Mission, Proven Results, Our Principles) with nested expandable principle items |
+| **Contact** | Contact form with spam protection, hours, phone, and email |
 
 ### SEO & AI Optimized
 - Schema.org structured data (ProfessionalService, WebSite)
@@ -42,10 +44,16 @@ A free, modern portfolio website template for developers, consultants, and softw
 - AI crawler friendly (`robots.txt` allows GPTBot, Claude, Perplexity, etc.)
 - Semantic HTML with ARIA labels
 
+### Interactive Elements
+- **Independent expandable cards**: Click any card to expand/collapse without affecting others
+- **No stretching**: Cards maintain their height when collapsed, even when other cards expand
+- **Smooth animations**: CSS transitions for expand/collapse with max-height and opacity
+- **Nested expandables**: Services, Research, and About pages support nested collapsible items
+
 ### Contact Form
 - Powered by [Formspree](https://formspree.io) (free tier: 50 submissions/month)
 - Honeypot spam protection (no annoying CAPTCHAs)
-- Grouped reason dropdown (Development, Consulting, Growth)
+- Contact methods displayed (hours, phone, email)
 - Optional company field
 - Mobile-responsive layout
 
@@ -73,6 +81,7 @@ npx serve .
 ### 3. Customize
 - Update company name, colors, and content
 - Replace images in `/images/`
+- Replace logo in `/images/logo.png` (used for favicon and nav)
 - Set up your Formspree form (see below)
 
 ---
@@ -108,12 +117,24 @@ opacity: Math.random() * 0.2 + 0.15
 const maxSnowflakes = 100;
 ```
 
+### Favicon Customization
+The template uses `/images/logo.png` for the favicon. To customize:
+1. Replace `/images/logo.png` with your logo (recommended: 512x512px PNG)
+2. For optimal quality, create dedicated favicon files at various sizes (16x16, 32x32, 180x180)
+3. Update the favicon links in all HTML files
+
 ### Adding Your Apps
 Update the apps section with your own projects. App icons can be loaded from Apple's CDN:
 ```bash
 # Get icon URL for any App Store app
 curl "https://itunes.apple.com/lookup?id=YOUR_APP_ID" | jq '.results[0].artworkUrl512'
 ```
+
+### Expandable Sections
+All expandable sections use `data-expanded` attributes and JavaScript event listeners. Each card expands/collapses independently. The CSS uses:
+- `align-items: start` on grid containers to prevent card stretching
+- `max-height` and `opacity` transitions for smooth animations
+- Unique event listeners per card (no accordion behavior)
 
 ---
 
@@ -156,21 +177,32 @@ Works with any static hosting:
 
 ```
 portfoliotemplate/
-├── index.html              # Homepage
+├── index.html              # Homepage with mission cards
 ├── styles.css              # Global styles
 ├── robots.txt              # SEO (allows AI crawlers)
 ├── sitemap.xml             # XML sitemap
 ├── staticwebapp.config.json # Azure config
 │
 ├── services/               # Services page
+│   ├── index.html          # 4 service categories
+│   └── services.css        # Service-specific styles
 ├── research/               # Research/tech page
+│   ├── index.html          # 6 focus areas
+│   └── research.css        # Research-specific styles
+├── blog/                   # Blog listing
+│   ├── index.html          # Article listing
+│   └── marketing-attribution/  # Individual blog posts
 ├── apps/                   # Apps portfolio
-│   ├── aircontrolla/       # Individual app pages
-│   ├── moviemaker/
-│   └── scanprice/
+│   ├── index.html          # Business & consumer apps
+│   └── apps.css            # Apps-specific styles
 ├── about/                  # About page
+│   ├── index.html          # Mission, results, principles
+│   └── about.css           # About-specific styles
 ├── contact/                # Contact page with form
+│   ├── index.html          # Contact form & info
+│   └── contact.css         # Contact-specific styles
 ├── images/                 # Site images
+│   └── logo.png            # Logo (used for nav & favicon)
 └── screenshots/            # README screenshots
 ```
 
