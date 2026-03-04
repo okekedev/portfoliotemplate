@@ -33,20 +33,19 @@
     color: var(--color-text);
 }
 
-/* Contact Grid */
+/* Contact Form Wrapper */
 .contact-main {
     min-height: 60vh;
 }
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-2xl);
+.contact-form-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-.contact-info h2,
-.contact-topics h2 {
+.contact-info h2 {
     margin-bottom: var(--spacing-md);
+    text-align: center;
 }
 
 .contact-info > p {
@@ -54,6 +53,7 @@
     font-size: 1.0625rem;
     line-height: 1.6;
     margin-bottom: var(--spacing-xl);
+    text-align: center;
 }
 
 /* Contact Form */
@@ -162,23 +162,41 @@
 .contact-alt {
     padding-top: var(--spacing-lg);
     border-top: 1px solid var(--color-border-light);
-}
-
-.contact-alt p {
-    font-size: 0.875rem;
-    color: var(--color-text-muted);
-    margin-bottom: var(--spacing-sm);
+    text-align: center;
 }
 
 .contact-alt .contact-methods {
     display: flex;
-    gap: var(--spacing-md);
+    gap: var(--spacing-2xl);
     margin-bottom: 0;
+    justify-content: center;
 }
 
-.contact-alt .contact-link {
-    font-size: 0.9375rem;
-    margin-bottom: 0;
+.contact-method-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.contact-method-item .method-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+.contact-method-item .method-value {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--color-text);
+    margin: 0;
+    text-decoration: none;
+}
+
+.contact-method-item .method-value:hover {
+    color: var(--color-primary);
 }
 
 /* Contact Methods */
@@ -297,11 +315,12 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-    .contact-grid {
-        grid-template-columns: 1fr;
+    .contact-form-wrapper {
+        padding: 0 var(--spacing-md);
     }
 
-    .contact-topics {
-        order: -1;
+    .contact-alt .contact-methods {
+        flex-direction: column;
+        gap: var(--spacing-lg);
     }
 }

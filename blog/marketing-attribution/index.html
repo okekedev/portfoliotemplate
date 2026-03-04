@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be Mindful of Your Marketing Metrics | Okeke LLC Blog</title>
+    <meta name="description" content="Why attribution can quietly overstate your growth. Learn how to separate influenced revenue from incremental growth using ServiceTitan and similar platforms.">
+    <meta name="keywords" content="marketing attribution, ServiceTitan, marketing ROI, marketing metrics, attribution windows, CEO insights">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Be Mindful of Your Marketing Metrics">
+    <meta property="og:description" content="Why attribution can quietly overstate your growth and how to fix it.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://okeke.us/blog/marketing-attribution/">
+    <meta property="article:published_time" content="2026-03-04">
+    <meta property="article:author" content="Okeke LLC">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Be Mindful of Your Marketing Metrics">
+    <meta name="twitter:description" content="Why attribution can quietly overstate your growth and how to fix it.">
+
+    <link rel="canonical" href="https://okeke.us/blog/marketing-attribution/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <style>
+        .article-header {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: var(--spacing-xl) var(--spacing-md) var(--spacing-md);
+        }
+
+        .article-header h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .article-header .page-subtitle {
+            font-size: 1.25rem;
+            color: var(--color-text-muted);
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+            color: var(--color-text-muted);
+            font-size: 0.9375rem;
+        }
+
+        .article-author {
+            font-size: 1.125rem;
+            color: var(--color-text-muted);
+            margin-top: var(--spacing-sm);
+            font-style: italic;
+        }
+
+        .article-content {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: var(--spacing-lg) var(--spacing-md);
+        }
+
+        .article-content h2 {
+            font-size: 1.75rem;
+            margin-top: var(--spacing-xl);
+            margin-bottom: var(--spacing-md);
+            color: var(--color-text);
+        }
+
+        .article-content h3 {
+            font-size: 1.375rem;
+            margin-top: var(--spacing-lg);
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-text);
+        }
+
+        .article-content p {
+            color: var(--color-text-muted);
+            font-size: 1.0625rem;
+            line-height: 1.7;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .article-content ul,
+        .article-content ol {
+            color: var(--color-text-muted);
+            font-size: 1.0625rem;
+            line-height: 1.7;
+            margin-bottom: var(--spacing-md);
+            padding-left: var(--spacing-lg);
+        }
+
+        .article-content li {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .article-content strong {
+            color: var(--color-text);
+            font-weight: 600;
+        }
+
+        .article-content em {
+            font-style: italic;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: var(--color-text-muted);
+            font-size: 0.875rem;
+            margin-bottom: var(--spacing-md);
+            transition: color var(--transition);
+        }
+
+        .back-link:hover {
+            color: var(--color-text);
+        }
+
+        .article-footer {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: var(--spacing-xl) 0;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .page-content {
+            background: white;
+            padding-top: 60px;
+        }
+
+        .article-footer h3 {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+        }
+
+        /* Share Section */
+        .share-section {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: var(--spacing-xl) var(--spacing-md);
+            border-top: 1px solid var(--color-border);
+        }
+
+        .share-section h3 {
+            font-size: 1.125rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--color-text);
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: var(--spacing-sm);
+            flex-wrap: wrap;
+        }
+
+        .share-button {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            padding: var(--spacing-sm) var(--spacing-md);
+            background: var(--color-bg-alt);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            color: var(--color-text);
+            font-size: 0.9375rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all var(--transition);
+        }
+
+        .share-button:hover {
+            background: white;
+            border-color: var(--color-primary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .share-button.twitter:hover {
+            border-color: #1DA1F2;
+            color: #1DA1F2;
+        }
+
+        .share-button.linkedin:hover {
+            border-color: #0A66C2;
+            color: #0A66C2;
+        }
+
+        .share-button.reddit:hover {
+            border-color: #FF4500;
+            color: #FF4500;
+        }
+
+        .share-button.email:hover {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+        }
+
+        .share-button svg {
+            flex-shrink: 0;
+        }
+
+        /* Quick Actions */
+        .quick-actions-section {
+            background: var(--color-bg-alt);
+            padding: var(--spacing-2xl) 0;
+        }
+
+        .quick-actions-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-lg);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .quick-action-card {
+            position: relative;
+            padding: var(--spacing-xl);
+            background: white;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            transition: all var(--transition);
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .quick-action-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--color-primary);
+            transform: translateY(-4px);
+        }
+
+        .quick-action-icon {
+            font-size: 3rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--color-primary);
+        }
+
+        .quick-action-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: var(--spacing-xs);
+            color: var(--color-text);
+        }
+
+        .quick-action-card p {
+            font-size: 0.9375rem;
+            color: var(--color-text-muted);
+            line-height: 1.6;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .quick-action-arrow {
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            transition: transform var(--transition);
+            display: inline-block;
+        }
+
+        .quick-action-card:hover .quick-action-arrow {
+            transform: translateX(8px);
+        }
+
+        @media (max-width: 768px) {
+            .quick-actions-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .share-buttons {
+                flex-direction: column;
+            }
+
+            .share-button {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Snowfall Canvas -->
+    <canvas id="snowfall" aria-hidden="true"></canvas>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="../../images/logo.png" alt="Okeke LLC" width="50" height="50">
+                Okeke LLC
+            </a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/services/">Services</a>
+                <a href="/research/">Research</a>
+                <a href="/blog/" class="active">Blog</a>
+                <a href="/apps/">Apps</a>
+                <a href="/about/">About</a>
+                <a href="/contact/" class="nav-cta">Get in Touch</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <article>
+            <header class="article-header">
+                <a href="/blog/" class="back-link">← Back to Blog</a>
+                <div class="article-meta">
+                    <time datetime="2026-03-04">March 4, 2026</time>
+                    <span>•</span>
+                    <span>12 min read</span>
+                </div>
+                <h1>Be Mindful of Your Marketing Metrics</h1>
+                <p class="page-subtitle">Why "Attribution" Can Quietly Overstate Your Growth</p>
+                <p class="article-author">by Christian Okeke</p>
+            </header>
+
+            <section>
+                <div class="article-content">
+                        <p>Most modern platforms promise end‑to‑end attribution: ad spend in, revenue out. Dashboards show tidy funnels—impressions, clicks, "leads," booked jobs, revenue, ROI. For a CEO, it's tempting to take those numbers at face value.</p>
+
+                        <p><strong>You shouldn't.</strong></p>
+
+                        <p>Using a real ServiceTitan Marketing Pro Ads setup as an example (with details anonymized), it's clear that many "marketing ROI" metrics are actually measuring <em>influence on existing demand</em>, not net‑new growth. That distinction matters when you're making budget and strategy decisions.</p>
+
+                        <h2>How the machine works (in plain English)</h2>
+
+                        <p>ServiceTitan connects Google Ads to phones and jobs using three core mechanisms:</p>
+
+                        <ol>
+                            <li><strong>Dynamic number insertion (DNI)</strong> – When someone clicks a Google ad and lands on your site, the phone number on the page is swapped with a unique tracking number tied to that ad source. Calls to that number are logged as "Google / CPC / [Search Campaign]."</li>
+
+                            <li><strong>Tracking numbers across channels</strong> – Additional numbers can be set up for Google Business Profile, direct mail, website, and so on. They all forward to your main line but are tagged to specific campaigns or sources.</li>
+
+                            <li><strong>Attribution windows</strong> – Marketing analytics can credit jobs and revenue to those touches for a defined period (for example, 7–30 days after the interaction).</li>
+                        </ol>
+
+                        <p>On paper, that lets the platform say: "This Google Ads search campaign produced dozens of leads, many booked jobs, and a mid‑five‑figure revenue number off a modest ad budget."</p>
+
+                        <p><strong>In practice, a lot of that "production" is repeat customers using tracked phone numbers inside the attribution window.</strong></p>
+
+                        <h2>The repeat‑customer problem</h2>
+
+                        <p>In the anonymized account:</p>
+
+                        <ul>
+                            <li>One Google Ads search campaign showed mid‑double‑digit "leads," several dozen booked jobs, and healthy five‑figure 'marketing revenue' over 30 days, off low‑four‑figure ad spend.</li>
+                            <li>The campaign's call log was dominated by short, abandoned calls with no clear new‑customer creation in the period.</li>
+                        </ul>
+
+                        <p>Yet ServiceTitan still attributed substantial revenue to that campaign, because jobs for those customers were booked within roughly a 7–30 day window after an earlier call to a campaign tracking number.</p>
+
+                        <h3>From the system's perspective:</h3>
+
+                        <ol>
+                            <li>The call hit a campaign tracking or DNI number, so the campaign "touched" the customer.</li>
+                            <li>Even if the call was marked Abandoned, marketing analytics can count it if the customer books a job within a short follow‑up window.</li>
+                            <li>If a job is booked later but still inside the broader attribution window, that revenue can be credited back to the original ad interaction.</li>
+                        </ol>
+
+                        <h3>From a CEO's perspective:</h3>
+
+                        <ul>
+                            <li>A repeat customer searched your brand, clicked an ad instead of the organic result, and called a tracking number.</li>
+                            <li>The system credited the paid campaign for revenue you likely would have earned anyway.</li>
+                        </ul>
+
+                        <p><strong>Technically accurate. Economically misleading.</strong></p>
+
+                        <h2>Why "New Customers" and "Leads" may not mean what you think</h2>
+
+                        <p>Even the "New Customers" metric needs careful reading. ServiceTitan's scorecard documentation notes that "new customer" is often defined as <em>the first job within the selected date range</em>, not "first job ever with your company." In a 30‑day view, a multi‑year customer who didn't buy last month can appear "new" again.</p>
+
+                        <p>"Leads" are also platform‑defined. In Marketing Pro Ads, the lead count can include:</p>
+
+                        <ul>
+                            <li>Inbound calls to campaign tracking/DNI numbers</li>
+                            <li>Certain abandoned or excused calls, if a job is booked within a short follow‑up window</li>
+                            <li>Web lead forms and online bookings that carry attribution parameters</li>
+                        </ul>
+
+                        <p>Those are valid touchpoints. They are not identical to "incremental, high‑intent prospects we only got because of this campaign."</p>
+
+                        <h2>What CEOs should actually watch</h2>
+
+                        <p>You don't need to ignore your attribution dashboards—but you do need to reinterpret them and supplement them.</p>
+
+                        <h3>1. Separate influenced revenue from incremental growth</h3>
+
+                        <p>Treat "marketing revenue" and dramatic ROI percentages as <em>influence</em> metrics: "Of all the work we did, how much passed through this marketing entry point?"</p>
+
+                        <p>For growth decisions, focus on:</p>
+
+                        <ul>
+                            <li><strong>First‑ever customers</strong>, not just "new this month." ServiceTitan offers a New Customers report and custom reporting templates that you can configure around "first job ever."</li>
+                            <li><strong>Handled lead calls</strong> to tracking/DNI numbers (answered, not abandoned, and classified as leads). Those are the closest thing to auditable, ad‑generated demand.</li>
+                        </ul>
+
+                        <h3>2. Tighten attribution windows</h3>
+
+                        <p>Shorten the Marketing Attribution (lookback) window in Digital Ads settings so last month's interaction doesn't keep crediting this month's revenue indefinitely. A tighter window (for example, 7–14 days) still captures realistic shopping cycles while limiting over‑crediting.</p>
+
+                        <h3>3. Protect your main line from tracking contamination</h3>
+
+                        <p>Keep repeat customers off your ad tracking numbers:</p>
+
+                        <ul>
+                            <li>Use campaign‑specific tracking numbers and DNI only in ads and dedicated landing pages.</li>
+                            <li>Make sure your main business number is what appears on invoices, trucks, and long‑lived materials, so returning customers naturally use a non‑tracked route.</li>
+                        </ul>
+
+                        <p>ServiceTitan itself recommends unique tracking numbers per campaign and warns that reusing numbers can distort revenue tracking.</p>
+
+                        <h3>4. Fix call handling so you can audit the story</h3>
+
+                        <p>Abandoned calls are often a workflow issue, not a marketing issue—CSRs answering phones without clicking the call bubble, answering services not integrated correctly, or calls timing out. ServiceTitan documents that Abandoned status arises when it can't confidently attach the call to a CSR or job.</p>
+
+                        <p>If campaign calls are mostly Abandoned:</p>
+
+                        <ul>
+                            <li>You lose visibility into which calls led to which jobs.</li>
+                            <li>Attribution is forced to lean heavily on time‑window logic.</li>
+                            <li>Your "leads," "booked jobs," and "revenue" become harder to trust.</li>
+                        </ul>
+
+                        <p>Cleaning up CSR workflow—always taking calls through the platform, classifying outcomes, and booking directly from the call screen—is part of getting decision‑grade marketing data.</p>
+
+                        <h2>The principle: "Technically correct" is not the same as "strategically useful"</h2>
+
+                        <p>Attribution platforms like ServiceTitan aren't lying. Within their own logic, the numbers are largely correct: campaigns are touching those customers, and those customers are generating revenue.</p>
+
+                        <p>But for a CEO, the strategic questions are different:</p>
+
+                        <ul>
+                            <li>How many profitable first‑time customers did this channel actually create?</li>
+                            <li>How much incremental margin did I get for the dollars I spent?</li>
+                            <li>Am I rewarding campaigns for capturing existing demand that would have reached us anyway?</li>
+                        </ul>
+
+                        <p><strong>Being mindful of your marketing metrics means:</strong></p>
+
+                        <ul>
+                            <li>Using attribution dashboards as diagnostics, not final answers.</li>
+                            <li>Defining "lead," "new customer," and "ROI" in terms that match the economics of your business, not just what the software can conveniently track.</li>
+                            <li>Investing in data hygiene—tracking numbers, attribution windows, call handling—so the numbers you do see are as close to "incremental reality" as possible.</li>
+                        </ul>
+
+                        <p>When you make that shift, tools like Marketing Pro Ads stop being inflated scoreboards and start being what you actually need at the CEO level: one calibrated signal among several that guides where the next marketing dollar should go.</p>
+                    </div>
+
+                    <!-- Share Section -->
+                    <div class="share-section">
+                        <h3>Share this article</h3>
+                        <div class="share-buttons">
+                            <a href="https://twitter.com/intent/tweet?text=Be%20Mindful%20of%20Your%20Marketing%20Metrics&url=https://okeke.us/blog/marketing-attribution/" target="_blank" rel="noopener noreferrer" class="share-button twitter">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                </svg>
+                                Twitter
+                            </a>
+                            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://okeke.us/blog/marketing-attribution/" target="_blank" rel="noopener noreferrer" class="share-button linkedin">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                                LinkedIn
+                            </a>
+                            <a href="https://www.reddit.com/submit?url=https://okeke.us/blog/marketing-attribution/&title=Be%20Mindful%20of%20Your%20Marketing%20Metrics" target="_blank" rel="noopener noreferrer" class="share-button reddit">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/>
+                                </svg>
+                                Reddit
+                            </a>
+                            <a href="mailto:?subject=Be%20Mindful%20of%20Your%20Marketing%20Metrics&body=I%20thought%20you%20might%20find%20this%20article%20interesting:%20https://okeke.us/blog/marketing-attribution/" class="share-button email">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                Email
+                            </a>
+                        </div>
+                    </div>
+            </section>
+
+            <!-- Quick Actions Section -->
+            <section class="quick-actions-section">
+                <div class="container">
+                    <h2 style="text-align: center; margin-bottom: var(--spacing-xl);">Explore More</h2>
+
+                    <div class="quick-actions-grid">
+                        <!-- Blog -->
+                        <a href="/blog/" class="quick-action-card">
+                            <div class="quick-action-icon">📝</div>
+                            <h3>Blog</h3>
+                            <p>Read more articles</p>
+                            <span class="quick-action-arrow">→</span>
+                        </a>
+
+                        <!-- Contact -->
+                        <a href="/contact/" class="quick-action-card">
+                            <div class="quick-action-icon">📧</div>
+                            <h3>Contact</h3>
+                            <p>Let's discuss your project</p>
+                            <span class="quick-action-arrow">→</span>
+                        </a>
+
+                        <!-- Research -->
+                        <a href="/research/" class="quick-action-card">
+                            <div class="quick-action-icon">🔬</div>
+                            <h3>Research</h3>
+                            <p>Explore our technical capabilities</p>
+                            <span class="quick-action-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">Okeke LLC</span>
+                    <p>Leverage technology to grow your business.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/services/">Services</a>
+                    <a href="/research/">Research</a>
+                    <a href="/blog/">Blog</a>
+                    <a href="/apps/">Apps</a>
+                    <a href="/about/">About</a>
+                    <a href="/contact/">Contact</a>
+                    <a href="/privacy-policy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Okeke LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        // Navbar background on scroll
+        const nav = document.querySelector('.nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Snowfall Animation
+        const canvas = document.getElementById('snowfall');
+        const ctx = canvas.getContext('2d');
+        let snowflakes = [];
+        const maxSnowflakes = 100;
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        function createSnowflake() {
+            return {
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height - canvas.height,
+                radius: Math.random() * 3 + 1,
+                speed: Math.random() * 1 + 0.5,
+                wind: Math.random() * 0.5 - 0.25,
+                opacity: Math.random() * 0.2 + 0.15
+            };
+        }
+
+        function initSnowflakes() {
+            snowflakes = [];
+            for (let i = 0; i < maxSnowflakes; i++) {
+                const flake = createSnowflake();
+                flake.y = Math.random() * canvas.height;
+                snowflakes.push(flake);
+            }
+        }
+
+        function drawSnowflakes() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            snowflakes.forEach((flake, index) => {
+                ctx.beginPath();
+                ctx.arc(flake.x, flake.y, flake.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(173, 216, 230, ${flake.opacity})`;
+                ctx.fill();
+                flake.y += flake.speed;
+                flake.x += flake.wind;
+                if (flake.y > canvas.height) snowflakes[index] = createSnowflake();
+                if (flake.x > canvas.width) flake.x = 0;
+                else if (flake.x < 0) flake.x = canvas.width;
+            });
+            requestAnimationFrame(drawSnowflakes);
+        }
+
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!prefersReducedMotion) {
+            resizeCanvas();
+            initSnowflakes();
+            drawSnowflakes();
+            window.addEventListener('resize', () => { resizeCanvas(); initSnowflakes(); });
+        }
+    </script>
+</body>
+</html>

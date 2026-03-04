@@ -30,6 +30,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="research/research.css">
 
     <!-- Structured Data - Organization -->
     <script type="application/ld+json">
@@ -132,13 +133,14 @@
     <nav class="nav">
         <div class="nav-container">
             <a href="/" class="nav-logo" aria-label="Okeke LLC Home">
-                <img src="/images/logo.png" alt="Okeke LLC" width="50" height="50">
+                <img src="images/logo.png" alt="Okeke LLC" width="50" height="50">
                 Okeke LLC
             </a>
             <div class="nav-links">
                 <a href="/">Home</a>
                 <a href="/services/">Services</a>
                 <a href="/research/">Research</a>
+                <a href="/blog/">Blog</a>
                 <a href="/apps/">Apps</a>
                 <a href="/about/">About</a>
                 <a href="/contact/" class="nav-cta">Get in Touch</a>
@@ -154,212 +156,283 @@
     <header class="hero">
         <div class="container hero-container">
             <div class="hero-text">
-                <p class="hero-eyebrow">Software Development & Consulting</p>
-                <h1>We build software.<br>We help you <span class="highlight">grow</span>.</h1>
-                <p class="hero-subtitle">From mobile apps to cloud architecture, we create technology that works — and help businesses scale with strategy, not just code.</p>
-                <div class="hero-cta">
-                    <a href="/services/" class="btn btn-primary">How We Help</a>
-                    <a href="/apps/" class="btn btn-secondary">See Our Work</a>
-                </div>
+                <p class="hero-eyebrow">Technology That Delivers Results</p>
+                <h1>Leverage technology<br>to <span class="highlight">grow your business</span>.</h1>
             </div>
             <div class="hero-image">
-                <img src="/images/hero-workspace.jpg" alt="Modern workspace setup with laptop for software development" width="1920" height="1257" loading="eager">
+                <img src="images/hero-workspace.jpg" alt="Modern workspace setup with laptop for software development" width="1920" height="1257" loading="eager">
             </div>
         </div>
     </header>
 
-    <!-- What We Do - Quick Overview -->
-    <section class="section overview-section" aria-labelledby="overview-heading">
-        <div class="container">
-            <h2 id="overview-heading" class="visually-hidden">What We Do</h2>
-            <div class="overview-grid">
-                <a href="/services/" class="overview-card">
-                    <div class="overview-icon" aria-hidden="true">🛠️</div>
-                    <h3>Services</h3>
-                    <p>Consulting, development, cloud architecture, and growth strategy for businesses ready to scale.</p>
-                    <span class="overview-link">Explore Services →</span>
-                </a>
-                <a href="/research/" class="overview-card">
-                    <div class="overview-icon" aria-hidden="true">🔬</div>
-                    <h3>Research</h3>
-                    <p>AI/ML, cloud-native systems, and emerging technologies we're actively exploring and building with.</p>
-                    <span class="overview-link">See What We're Learning →</span>
-                </a>
-                <a href="/apps/" class="overview-card">
-                    <div class="overview-icon" aria-hidden="true">📱</div>
-                    <h3>Apps</h3>
-                    <p>Our portfolio of published applications — proof that we build real products people use.</p>
-                    <span class="overview-link">View Our Apps →</span>
-                </a>
+    <!-- Integration Badges - Rolling Animation -->
+    <section class="integrations-ticker" aria-label="Platform Integrations">
+        <div class="integrations-ticker-wrapper">
+        <div class="ticker-track">
+            <div class="ticker-item claude">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                    <rect x="3" y="3" width="18" height="18" rx="4" ry="4"/>
+                    <path d="M12 8 L12 16 M8 12 Q10 10, 12 8 Q14 10, 16 12" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
+                </svg>
+                <span>Claude AI</span>
             </div>
+            <div class="ticker-item meta">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+                <span>Meta</span>
+            </div>
+            <div class="ticker-item google">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                </svg>
+                <span>Google Analytics</span>
+            </div>
+            <div class="ticker-item azure">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                    <path d="M9.1 14.5l4.4-11.8L21 19.3H3.6L9.1 14.5zm4.5-10.3L11.7 9l7.6 8.8h-4.8l-1 1.5h7.2L13.6 4.2z"/>
+                </svg>
+                <span>Microsoft Azure</span>
+            </div>
+            <div class="ticker-item twilio">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                    <circle cx="12" cy="12" r="10"/>
+                    <circle cx="9" cy="9" r="2" fill="white"/>
+                    <circle cx="15" cy="9" r="2" fill="white"/>
+                    <circle cx="9" cy="15" r="2" fill="white"/>
+                    <circle cx="15" cy="15" r="2" fill="white"/>
+                </svg>
+                <span>Twilio</span>
+            </div>
+            <div class="ticker-item stripe">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                    <path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.594-7.305h.003z"/>
+                </svg>
+                <span>Stripe</span>
+            </div>
+            <div class="ticker-item github">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                <span>GitHub</span>
+            </div>
+            <div class="ticker-item pinterest">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                    <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/>
+                </svg>
+                <span>Pinterest</span>
+            </div>
+            <div class="ticker-item instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+                <span>Instagram</span>
+            </div>
+            <!-- Duplicate for seamless loop -->
+            <div class="ticker-item claude">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                    <rect x="3" y="3" width="18" height="18" rx="4" ry="4"/>
+                    <path d="M12 8 L12 16 M8 12 Q10 10, 12 8 Q14 10, 16 12" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
+                </svg>
+                <span>Claude AI</span>
+            </div>
+            <div class="ticker-item meta">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+                <span>Meta</span>
+            </div>
+            <div class="ticker-item google">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                </svg>
+                <span>Google Analytics</span>
+            </div>
+            <div class="ticker-item azure">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                    <path d="M9.1 14.5l4.4-11.8L21 19.3H3.6L9.1 14.5zm4.5-10.3L11.7 9l7.6 8.8h-4.8l-1 1.5h7.2L13.6 4.2z"/>
+                </svg>
+                <span>Microsoft Azure</span>
+            </div>
+            <div class="ticker-item twilio">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                    <circle cx="12" cy="12" r="10"/>
+                    <circle cx="9" cy="9" r="2" fill="white"/>
+                    <circle cx="15" cy="9" r="2" fill="white"/>
+                    <circle cx="9" cy="15" r="2" fill="white"/>
+                    <circle cx="15" cy="15" r="2" fill="white"/>
+                </svg>
+                <span>Twilio</span>
+            </div>
+            <div class="ticker-item stripe">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                    <path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.594-7.305h.003z"/>
+                </svg>
+                <span>Stripe</span>
+            </div>
+            <div class="ticker-item github">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                <span>GitHub</span>
+            </div>
+            <div class="ticker-item pinterest">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                    <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/>
+                </svg>
+                <span>Pinterest</span>
+            </div>
+            <div class="ticker-item instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+                <span>Instagram</span>
+            </div>
+        </div>
         </div>
     </section>
 
-    <!-- Services Preview -->
+    <!-- What's Our Goal -->
     <section class="section services-preview" aria-labelledby="services-heading">
         <div class="container">
             <div class="section-header">
-                <h2 id="services-heading">How We Help</h2>
-                <a href="/services/" class="section-link">All Services →</a>
+                <h2 id="services-heading">Our Mission</h2>
             </div>
-            <p class="section-subtitle">Whether you need to build, grow, or scale — we've done it ourselves and can help you do it too.</p>
 
             <div class="services-grid-preview">
-                <div class="service-preview-card">
-                    <h3>Technical Consulting</h3>
-                    <p>Architecture reviews, technology decisions, and technical strategy. We help you make the right choices before writing a line of code.</p>
+                <div class="service-preview-card expandable" data-expanded="false">
+                    <div class="service-card-header">
+                        <div class="service-icon">⚡</div>
+                        <h3>Enhance Efficiency</h3>
+                        <svg class="expand-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="service-full-content">
+                        <p>AI automation and platform integration that eliminates manual work—connect Claude AI, Meta, Azure, Twilio, Stripe, and more into intelligent workflows that run on autopilot and save 40+ hours/week on operations.</p>
+                    </div>
                 </div>
-                <div class="service-preview-card">
-                    <h3>Product Development</h3>
-                    <p>Full-stack mobile and web applications. From MVP to scale, we build products that users love and businesses depend on.</p>
+                <div class="service-preview-card expandable" data-expanded="false">
+                    <div class="service-card-header">
+                        <div class="service-icon">📈</div>
+                        <h3>Boost ROI</h3>
+                        <svg class="expand-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="service-full-content">
+                        <p>Technology investments that pay for themselves—from HIPAA-compliant healthcare platforms to automated business workflows, we build solutions that reduce costs and increase revenue with measurable returns in 3-6 months.</p>
+                    </div>
                 </div>
-                <div class="service-preview-card">
-                    <h3>Cloud & Infrastructure</h3>
-                    <p>Azure, AWS, serverless, containers. We design and implement cloud architecture that's secure, scalable, and cost-effective.</p>
+                <div class="service-preview-card expandable" data-expanded="false">
+                    <div class="service-card-header">
+                        <div class="service-icon">🚀</div>
+                        <h3>Create Assets</h3>
+                        <svg class="expand-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="service-full-content">
+                        <p>Scalable mobile apps, web platforms, and cloud infrastructure—products that generate recurring revenue and grow with your business, deployed with enterprise-grade reliability across 8+ production systems.</p>
+                    </div>
                 </div>
-                <div class="service-preview-card">
-                    <h3>Growth Strategy</h3>
-                    <p>Marketing, user acquisition, and scaling operations. We've grown our own products and can help you grow yours.</p>
+                <div class="service-preview-card expandable" data-expanded="false">
+                    <div class="service-card-header">
+                        <div class="service-icon">✨</div>
+                        <h3>Mobilize AI</h3>
+                        <svg class="expand-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="service-full-content">
+                        <p>24+ Claude-powered digital employees handling marketing, operations, and growth—the future of automated business workflows that run your entire marketing department on autopilot.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Research Preview -->
-    <section class="section research-preview" aria-labelledby="research-heading">
+    <!-- Metrics Section -->
+    <section class="metrics-section">
+        <div class="container">
+            <h2 style="margin-bottom: var(--spacing-xl);">Solutions with ROI</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon">🔗</div>
+                    <div class="metric-content">
+                        <div class="metric-number">9+</div>
+                        <div class="metric-label">Platform Integrations</div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">🤖</div>
+                    <div class="metric-content">
+                        <div class="metric-number">24+</div>
+                        <div class="metric-label">Digital Employees</div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">📱</div>
+                    <div class="metric-content">
+                        <div class="metric-number">8+</div>
+                        <div class="metric-label">Apps in Production</div>
+                        <a href="/apps/" class="btn btn-outline btn-small" style="margin-top: var(--spacing-sm);">View Apps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Blog Post -->
+    <section class="section latest-blog-section" aria-labelledby="latest-blog-heading">
         <div class="container">
             <div class="section-header">
-                <h2 id="research-heading">What We're Exploring</h2>
-                <a href="/research/" class="section-link">All Research →</a>
+                <h2 id="latest-blog-heading">Latest Insights</h2>
             </div>
-            <p class="section-subtitle">Technology moves fast. We stay current by building, experimenting, and learning continuously.</p>
-
-            <div class="research-tags" role="list" aria-label="Technologies we're researching">
-                <span class="research-tag" role="listitem">AI & Machine Learning</span>
-                <span class="research-tag" role="listitem">Large Language Models</span>
-                <span class="research-tag" role="listitem">Cloud-Native Architecture</span>
-                <span class="research-tag" role="listitem">Swift & SwiftUI</span>
-                <span class="research-tag" role="listitem">Serverless Computing</span>
-                <span class="research-tag" role="listitem">Edge Computing</span>
-                <span class="research-tag" role="listitem">MLOps</span>
-                <span class="research-tag" role="listitem">DevOps & CI/CD</span>
-            </div>
-
-            <p class="research-note">We don't just read about these technologies — we build with them. Our apps are our lab.</p>
-        </div>
-    </section>
-
-    <!-- Apps Preview -->
-    <section class="section apps-section" aria-labelledby="apps-heading">
-        <div class="container">
-            <div class="section-header">
-                <h2 id="apps-heading">Our Apps</h2>
-                <a href="/apps/" class="section-link">View All →</a>
-            </div>
-            <p class="section-subtitle">Real products, real users, real revenue. Built with Swift, Python, and modern cloud technologies.</p>
-
-            <div class="apps-grid">
-                <!-- MedRec - Business App -->
-                <article class="app-card featured business">
-                    <div class="app-icon" role="img" aria-label="MedRec - Clinical document review platform">
-                        <div class="app-icon-placeholder healthcare">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="36" height="36">
-                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="app-content">
-                        <div class="app-platforms">
-                            <span class="platform business">Enterprise</span>
-                            <span class="platform">Web</span>
-                        </div>
-                        <h3>MedRec</h3>
-                        <p>HIPAA-compliant clinical document review platform with AI-powered data extraction for healthcare providers.</p>
-                        <div class="app-links">
-                            <a href="/contact/" class="btn btn-small">Request Demo</a>
-                            <a href="/apps/#business" class="link-arrow">Learn more →</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Movie Maker -->
-                <article class="app-card featured">
-                    <div class="app-icon" role="img" aria-label="Movie Maker app icon - Video editing application">
-                        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9e/07/b6/9e07b628-82b7-41d9-54f1-a18813877a32/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt="Movie Maker" width="72" height="72" loading="lazy">
-                    </div>
-                    <div class="app-content">
-                        <div class="app-platforms">
-                            <span class="platform">iOS</span>
-                            <span class="platform">iPad</span>
-                        </div>
-                        <h3>Movie Maker – Video Editor</h3>
-                        <p>Create stunning videos with an intuitive editor. Professional results, simple workflow for creators.</p>
-                        <div class="app-links">
-                            <a href="https://apps.apple.com/us/app/movie-maker-video-editor/id6755254508" class="btn btn-small" target="_blank" rel="noopener noreferrer" aria-label="Download Movie Maker on the App Store">App Store</a>
-                            <a href="/apps/moviemaker/" class="link-arrow">Learn more →</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- ScanPrice -->
-                <article class="app-card featured">
-                    <div class="app-icon" role="img" aria-label="ScanPrice app icon - Currency conversion application">
-                        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/22/ec/0a/22ec0a01-c46e-54fb-6568-5248c1502d70/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt="ScanPrice" width="72" height="72" loading="lazy">
-                    </div>
-                    <div class="app-content">
-                        <div class="app-platforms">
-                            <span class="platform">iOS</span>
-                        </div>
-                        <h3>ScanPrice: Currency Converter</h3>
-                        <p>Real-time currency conversion for travelers and international shoppers. 160+ currencies supported.</p>
-                        <div class="app-links">
-                            <a href="https://apps.apple.com/us/app/scanprice-currency-converter/id6755891772" class="btn btn-small" target="_blank" rel="noopener noreferrer" aria-label="Download ScanPrice on the App Store">App Store</a>
-                            <a href="/apps/scanprice/" class="link-arrow">Learn more →</a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-
-            <div class="apps-more">
-                <a href="/apps/" class="btn btn-outline">See All 8 Apps</a>
+            <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+                <div style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: var(--spacing-sm);">March 4, 2026 • 12 min read</div>
+                <h3>Be Mindful of Your Marketing Metrics</h3>
+                <p class="section-subtitle">Why "attribution" can quietly overstate your growth. Learn how to separate influenced revenue from incremental growth and make better budget decisions.</p>
+                <a href="/blog/marketing-attribution/" class="btn btn-outline" style="margin-top: var(--spacing-md);">Read Article</a>
             </div>
         </div>
     </section>
 
-    <!-- About Preview -->
-    <section class="section about-section" aria-labelledby="about-heading">
+    <!-- Quick Actions Section -->
+    <section class="section quick-actions-section">
         <div class="container">
-            <div class="about-content">
-                <h2 id="about-heading">About Okeke LLC</h2>
-                <p>We're a software development company that builds products and helps others build theirs. Our portfolio spans business tools, educational apps, and creative utilities — each one a learning experience that makes us better at what we do.</p>
-                <p>We believe in <em>learning by building</em>. Every technology we recommend to clients, we've used ourselves. Every strategy we suggest, we've tested on our own products.</p>
-                <div class="about-stats">
-                    <div class="stat">
-                        <span class="stat-number">8</span>
-                        <span class="stat-label">Apps Published</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">0</span>
-                        <span class="stat-label">Crashes</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">Stability</span>
-                    </div>
-                </div>
-                <a href="/about/" class="btn btn-secondary" style="margin-top: var(--spacing-lg);">Learn More About Us →</a>
-            </div>
-        </div>
-    </section>
+            <h2 style="text-align: center; margin-bottom: var(--spacing-xl);">Explore More</h2>
 
-    <!-- Contact CTA -->
-    <section class="section contact-section" aria-labelledby="contact-heading">
-        <div class="container">
-            <h2 id="contact-heading">Let's Talk</h2>
-            <p class="section-subtitle">Have a project in mind? Need help scaling? Just want to connect? We'd love to hear from you.</p>
-            <div class="contact-links">
-                <a href="mailto:contact@okeke.us" class="btn btn-primary btn-large" aria-label="Email us at contact@okeke.us">contact@okeke.us</a>
-                <a href="https://www.linkedin.com/company/okeke-llc/" class="btn btn-outline btn-large" target="_blank" rel="noopener noreferrer" aria-label="Visit our LinkedIn page">LinkedIn</a>
+            <div class="quick-actions-grid">
+                <!-- Services -->
+                <a href="/services/" class="quick-action-card">
+                    <div class="quick-action-icon">⚡</div>
+                    <h3>Services</h3>
+                    <p>View all our services</p>
+                    <span class="quick-action-arrow">→</span>
+                </a>
+
+                <!-- Blog -->
+                <a href="/blog/" class="quick-action-card">
+                    <div class="quick-action-icon">📝</div>
+                    <h3>Blog</h3>
+                    <p>Read our latest insights</p>
+                    <span class="quick-action-arrow">→</span>
+                </a>
+
+                <!-- Contact -->
+                <a href="/contact/" class="quick-action-card">
+                    <div class="quick-action-icon">📧</div>
+                    <h3>Contact</h3>
+                    <p>Let's discuss your project</p>
+                    <span class="quick-action-arrow">→</span>
+                </a>
             </div>
         </div>
     </section>
@@ -369,23 +442,21 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <span class="footer-logo">Okeke LLC</span>
-                    <p>Building software. Helping businesses grow.</p>
+                    <p>Leverage technology to grow your business.</p>
                 </div>
                 <nav class="footer-links" aria-label="Footer navigation">
                     <a href="/services/">Services</a>
                     <a href="/research/">Research</a>
+                    <a href="/blog/">Blog</a>
                     <a href="/apps/">Apps</a>
                     <a href="/about/">About</a>
                     <a href="/contact/">Contact</a>
-                    <a href="https://sundai.us" target="_blank" rel="noopener noreferrer">Portfolio</a>
+                    <a href="/privacy-policy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Service</a>
                 </nav>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Okeke LLC. All rights reserved.</p>
-                <nav class="footer-legal" aria-label="Legal links">
-                    <a href="/privacy-policy/">Privacy Policy</a>
-                    <a href="/terms/">Terms of Service</a>
-                </nav>
             </div>
         </div>
     </footer>
@@ -405,6 +476,27 @@
         const nav = document.querySelector('.nav');
         window.addEventListener('scroll', () => {
             nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Service Cards - Expandable functionality
+        const serviceCards = document.querySelectorAll('.service-preview-card.expandable');
+        serviceCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const isExpanded = card.getAttribute('data-expanded') === 'true';
+
+                if (isExpanded) {
+                    // Close this card
+                    card.setAttribute('data-expanded', 'false');
+                } else {
+                    // Close all other cards first
+                    serviceCards.forEach(otherCard => {
+                        otherCard.setAttribute('data-expanded', 'false');
+                    });
+
+                    // Open this card
+                    card.setAttribute('data-expanded', 'true');
+                }
+            });
         });
 
         // Snowfall Animation

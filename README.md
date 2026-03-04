@@ -2,7 +2,7 @@
 
 A free, modern portfolio website template for developers, consultants, and software companies. Built with clean HTML, CSS, and vanilla JavaScript — no build tools required.
 
-**[Live Demo](https://nice-coast-0382e4910.1.azurestaticapps.net)** | **[Used by Okeke LLC](https://okeke.us)**
+**[Live Site: okeke.us](https://okeke.us)**
 
 ---
 

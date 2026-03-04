@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Okeke LLC - Our Story & Mission</title>
-    <meta name="description" content="Learn about Okeke LLC - a software development company that builds products and helps businesses grow through technology, strategy, and hands-on experience.">
+    <title>About Us | Okeke LLC - Leverage Technology to Grow Faster</title>
+    <meta name="description" content="We help businesses and enterprises enhance efficiency, boost ROI, and create scalable digital assets through AI automation, platform integration, and custom software development.">
     <meta name="keywords" content="Okeke LLC, software company, about us, mission, iOS development, consulting">
 
     <!-- Open Graph -->
@@ -29,6 +29,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="../research/research.css">
 </head>
 <body>
     <!-- Snowfall Canvas -->
@@ -37,13 +38,14 @@
     <nav class="nav">
         <div class="nav-container">
             <a href="/" class="nav-logo">
-                <img src="/images/logo.png" alt="Okeke LLC" width="50" height="50">
+                <img src="../images/logo.png" alt="Okeke LLC" width="50" height="50">
                 Okeke LLC
             </a>
             <div class="nav-links">
                 <a href="/">Home</a>
                 <a href="/services/">Services</a>
                 <a href="/research/">Research</a>
+                <a href="/blog/">Blog</a>
                 <a href="/apps/">Apps</a>
                 <a href="/about/" class="active">About</a>
                 <a href="/contact/" class="nav-cta">Get in Touch</a>
@@ -63,10 +65,9 @@
                     <div class="page-hero-text">
                         <a href="/" class="back-link">← Home</a>
                         <h1>About Okeke LLC</h1>
-                        <p class="page-subtitle">We build software and help businesses grow. Every technology we recommend, we've used ourselves. Every strategy we suggest, we've tested on our own products.</p>
                     </div>
                     <div class="page-hero-image">
-                        <img src="/images/team-collaboration.jpg" alt="Team collaboration at Okeke LLC" width="1200" height="800" loading="eager">
+                        <img src="../images/team-collaboration.jpg" alt="Team collaboration at Okeke LLC" width="1200" height="800" loading="eager">
                     </div>
                 </div>
             </div>
@@ -74,116 +75,147 @@
 
         <section class="section">
             <div class="container">
-                <div class="about-grid">
-                    <div class="about-main">
-                        <h2>Our Story</h2>
-                        <p>Okeke LLC started with a simple belief: <strong>the best way to learn is by building</strong>. We didn't want to be consultants who only advise — we wanted to be builders who ship real products to real users.</p>
-                        <p>So we built apps. We put them in the App Store. We learned what works and what doesn't through direct experience — not theory, not case studies, but actual downloads, revenue, and user feedback.</p>
-                        <p>Today, our portfolio includes 8 published applications spanning business tools, educational apps, and creative utilities. Each one taught us something new about technology, user experience, and what it takes to build software people actually want to use.</p>
-                        <p>That hands-on experience is what we bring to our consulting work. When we recommend a technology, it's because we've used it. When we suggest a growth strategy, it's because we've tested it. That's the difference between theory and experience.</p>
+                <div class="about-sections">
+                    <!-- Our Mission - Collapsible -->
+                    <div class="about-section expandable" data-expanded="false">
+                        <div class="about-section-header">
+                            <h2>Our Mission</h2>
+                            <svg class="expand-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="about-section-content" style="display: none;">
+                            <p>Technology should <strong>enhance efficiency, not create complexity</strong>. That's why we focus on solutions that deliver measurable business outcomes—whether through AI automation that eliminates manual operations, platform integrations that connect your tools, or digital assets that generate recurring revenue.</p>
+                            <p>Our approach is simple: <strong>Technology that delivers ROI.</strong> Every project is measured by efficiency gains, cost reduction, or revenue generation. If it doesn't move the needle on your business, we don't build it.</p>
+                        </div>
                     </div>
 
-                    <div class="about-sidebar">
-                        <div class="about-stats-card">
-                            <h3>By the Numbers</h3>
-                            <div class="stat-row">
-                                <span class="stat-number">8</span>
-                                <span class="stat-label">Apps Published</span>
-                            </div>
-                            <div class="stat-row">
-                                <span class="stat-number">0</span>
-                                <span class="stat-label">Crashes</span>
-                            </div>
-                            <div class="stat-row">
-                                <span class="stat-number">100%</span>
-                                <span class="stat-label">Stability Rate</span>
-                            </div>
-                            <div class="stat-row">
-                                <span class="stat-number">5+</span>
-                                <span class="stat-label">Countries Reached</span>
+                    <!-- Proven Results - Collapsible -->
+                    <div class="about-section expandable" data-expanded="false">
+                        <div class="about-section-header">
+                            <h2>Proven Results</h2>
+                            <svg class="expand-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="about-section-content" style="display: none;">
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <span class="stat-number">9+</span>
+                                    <span class="stat-label">Platform Integrations</span>
+                                </div>
+                                <div class="stat-card">
+                                    <span class="stat-number">24+</span>
+                                    <span class="stat-label">Digital Employees</span>
+                                </div>
+                                <div class="stat-card">
+                                    <span class="stat-number">8+</span>
+                                    <span class="stat-label">Apps in Production</span>
+                                </div>
+                                <div class="stat-card">
+                                    <span class="stat-number">100%</span>
+                                    <span class="stat-label">Enterprise Grade</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+
+                    <!-- Our Principles - Collapsible -->
+                    <div class="about-section expandable" data-expanded="false">
+                        <div class="about-section-header">
+                            <h2>Our Principles</h2>
+                            <svg class="expand-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="about-section-content" style="display: none;">
+                            <div class="principles-grid">
+                                <!-- Efficiency First -->
+                                <div class="principle-item expandable" data-expanded="false">
+                                    <div class="principle-header">
+                                        <h3>⚡ Efficiency First</h3>
+                                        <svg class="expand-icon-small" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </div>
+                                    <div class="principle-content" style="display: none;">
+                                        <p>Every solution we build eliminates manual work. If it doesn't save time, reduce costs, or increase capacity—we don't ship it.</p>
+                                    </div>
+                                </div>
+
+                                <!-- ROI-Driven -->
+                                <div class="principle-item expandable" data-expanded="false">
+                                    <div class="principle-header">
+                                        <h3>📈 ROI-Driven</h3>
+                                        <svg class="expand-icon-small" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </div>
+                                    <div class="principle-content" style="display: none;">
+                                        <p>Technology is an investment. We measure success by business outcomes: faster operations, lower costs, higher revenue.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Built to Scale -->
+                                <div class="principle-item expandable" data-expanded="false">
+                                    <div class="principle-header">
+                                        <h3>🚀 Built to Scale</h3>
+                                        <svg class="expand-icon-small" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </div>
+                                    <div class="principle-content" style="display: none;">
+                                        <p>From day one, we design for growth. Whether it's 100 users or 100,000—our systems are built to handle scale.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Enterprise Grade -->
+                                <div class="principle-item expandable" data-expanded="false">
+                                    <div class="principle-header">
+                                        <h3>🔒 Enterprise Grade</h3>
+                                        <svg class="expand-icon-small" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </div>
+                                    <div class="principle-content" style="display: none;">
+                                        <p>Security, reliability, compliance—these aren't optional. Every system we build meets enterprise standards from the start.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </section>
 
-        <section class="section values-section">
+        <!-- Quick Actions Section -->
+        <section class="section quick-actions-section">
             <div class="container">
-                <h2>What We Believe</h2>
-                <div class="values-grid">
-                    <div class="value-card">
-                        <h3>Build to Learn</h3>
-                        <p>Every product we build teaches us something. We don't wait for perfect conditions — we ship, learn, and iterate.</p>
-                    </div>
-                    <div class="value-card">
-                        <h3>Quality Over Quantity</h3>
-                        <p>Zero crashes isn't luck — it's a commitment. We'd rather ship fewer features that work perfectly than many that don't.</p>
-                    </div>
-                    <div class="value-card">
-                        <h3>Honest Advice</h3>
-                        <p>We'll tell you what we really think, even if it's not what you want to hear. Good decisions require honest input.</p>
-                    </div>
-                    <div class="value-card">
-                        <h3>Stay Current</h3>
-                        <p>Technology moves fast. We invest in continuous learning so we can recommend what actually works today, not three years ago.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <h2 style="text-align: center; margin-bottom: var(--spacing-xl);">Explore More</h2>
 
-        <section class="section expertise-section">
-            <div class="container">
-                <h2>Our Expertise</h2>
-                <p class="section-subtitle">Technologies and domains where we have hands-on production experience.</p>
+                <div class="quick-actions-grid">
+                    <!-- Home -->
+                    <a href="/" class="quick-action-card">
+                        <div class="quick-action-icon">🏠</div>
+                        <h3>Home</h3>
+                        <p>Return to homepage</p>
+                        <span class="quick-action-arrow">→</span>
+                    </a>
 
-                <div class="expertise-grid">
-                    <div class="expertise-category">
-                        <h3>Mobile Development</h3>
-                        <ul>
-                            <li>iOS (Swift, SwiftUI, UIKit)</li>
-                            <li>macOS applications</li>
-                            <li>App Store optimization</li>
-                            <li>In-app purchases & subscriptions</li>
-                        </ul>
-                    </div>
-                    <div class="expertise-category">
-                        <h3>Web & Backend</h3>
-                        <ul>
-                            <li>Python (FastAPI, Django)</li>
-                            <li>JavaScript/TypeScript</li>
-                            <li>REST APIs</li>
-                            <li>Database design</li>
-                        </ul>
-                    </div>
-                    <div class="expertise-category">
-                        <h3>Cloud & Infrastructure</h3>
-                        <ul>
-                            <li>Microsoft Azure</li>
-                            <li>AWS</li>
-                            <li>Serverless architecture</li>
-                            <li>CI/CD pipelines</li>
-                        </ul>
-                    </div>
-                    <div class="expertise-category">
-                        <h3>AI & Emerging Tech</h3>
-                        <ul>
-                            <li>LLM integration</li>
-                            <li>Core ML</li>
-                            <li>Prompt engineering</li>
-                            <li>AI-powered features</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+                    <!-- Apps -->
+                    <a href="/apps/" class="quick-action-card">
+                        <div class="quick-action-icon">📱</div>
+                        <h3>Apps</h3>
+                        <p>View our digital assets</p>
+                        <span class="quick-action-arrow">→</span>
+                    </a>
 
-        <section class="section cta-section">
-            <div class="container">
-                <div class="cta-block">
-                    <h2>Ready to work together?</h2>
-                    <p>Whether you need help building a product, solving a technical challenge, or scaling your business — let's talk.</p>
-                    <a href="/contact/" class="btn btn-primary btn-large">Get in Touch</a>
+                    <!-- Contact -->
+                    <a href="/contact/" class="quick-action-card">
+                        <div class="quick-action-icon">📧</div>
+                        <h3>Get in Touch</h3>
+                        <p>Let's discuss your project</p>
+                        <span class="quick-action-arrow">→</span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -194,15 +226,17 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <span class="footer-logo">Okeke LLC</span>
-                    <p>Building software. Helping businesses grow.</p>
+                    <p>Leverage technology to grow your business.</p>
                 </div>
                 <div class="footer-links">
                     <a href="/services/">Services</a>
                     <a href="/research/">Research</a>
+                    <a href="/blog/">Blog</a>
                     <a href="/apps/">Apps</a>
                     <a href="/about/">About</a>
                     <a href="/contact/">Contact</a>
-                    <a href="https://sundai.us" target="_blank" rel="noopener noreferrer">Portfolio</a>
+                    <a href="/privacy-policy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Service</a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -224,6 +258,45 @@
         const nav = document.querySelector('.nav');
         window.addEventListener('scroll', () => {
             nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Collapsible About Sections
+        const aboutSections = document.querySelectorAll('.about-section.expandable');
+        aboutSections.forEach(section => {
+            const header = section.querySelector('.about-section-header');
+            const content = section.querySelector('.about-section-content');
+
+            header.addEventListener('click', () => {
+                const isExpanded = section.getAttribute('data-expanded') === 'true';
+
+                if (isExpanded) {
+                    section.setAttribute('data-expanded', 'false');
+                    content.style.display = 'none';
+                } else {
+                    section.setAttribute('data-expanded', 'true');
+                    content.style.display = 'block';
+                }
+            });
+        });
+
+        // Collapsible Principle Items (nested)
+        const principleItems = document.querySelectorAll('.principle-item.expandable');
+        principleItems.forEach(item => {
+            const header = item.querySelector('.principle-header');
+            const content = item.querySelector('.principle-content');
+
+            header.addEventListener('click', (e) => {
+                e.stopPropagation(); // Prevent parent section toggle
+                const isExpanded = item.getAttribute('data-expanded') === 'true';
+
+                if (isExpanded) {
+                    item.setAttribute('data-expanded', 'false');
+                    content.style.display = 'none';
+                } else {
+                    item.setAttribute('data-expanded', 'true');
+                    content.style.display = 'block';
+                }
+            });
         });
 
         // Snowfall Animation

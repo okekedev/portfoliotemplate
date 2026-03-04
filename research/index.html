@@ -36,13 +36,14 @@
     <nav class="nav">
         <div class="nav-container">
             <a href="/" class="nav-logo">
-                <img src="/images/logo.png" alt="Okeke LLC" width="50" height="50">
+                <img src="../images/logo.png" alt="Okeke LLC" width="50" height="50">
                 Okeke LLC
             </a>
             <div class="nav-links">
                 <a href="/">Home</a>
                 <a href="/services/">Services</a>
                 <a href="/research/" class="active">Research</a>
+                <a href="/blog/">Blog</a>
                 <a href="/apps/">Apps</a>
                 <a href="/about/">About</a>
                 <a href="/contact/" class="nav-cta">Get in Touch</a>
@@ -59,240 +60,251 @@
         <header class="page-hero">
             <div class="container">
                 <a href="/" class="back-link">← Home</a>
-                <h1>Research & Technology</h1>
-                <p class="page-subtitle">Technology changes fast. Staying relevant means continuous learning, experimentation, and building. Here's what we're focused on.</p>
+                <h1>Research & Technologies</h1>
+                <p class="page-subtitle">The technologies and platforms we use to enhance efficiency, boost ROI, and build scalable digital assets.</p>
             </div>
         </header>
 
-        <section class="section">
+        <!-- Focus Areas -->
+        <section class="section focus-areas-section">
             <div class="container">
-                <div class="philosophy-grid">
-                    <div class="philosophy-block">
-                        <h2>Our Approach</h2>
-                        <p>We don't just read documentation and watch tutorials. We build things. Our published apps are our laboratory — each one an opportunity to test new technologies, architectures, and approaches in production with real users.</p>
-                        <p>When we recommend a technology to a client, we've already used it ourselves. That's the difference between theoretical knowledge and practical experience.</p>
-                    </div>
-                    <div class="philosophy-image">
-                        <img src="/images/innovation-lightbulb.jpg" alt="Innovation and creative thinking in technology research" width="1200" height="834" loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <h2>Current Focus Areas</h2>
+                <h2 style="margin-bottom: var(--spacing-md);">Focus Areas</h2>
+                <p class="section-subtitle" style="margin-bottom: var(--spacing-xl);">Click any area to explore the technologies and platforms we use in production.</p>
 
                 <div class="research-grid">
                     <!-- AI & Machine Learning -->
-                    <article class="research-card">
-                        <div class="research-card-header">
-                            <span class="research-icon">🤖</span>
-                            <h3>AI & Machine Learning</h3>
+                    <article class="research-card expandable" data-expanded="false">
+                        <div class="research-card-header" role="button" tabindex="0">
+                            <div style="display: flex; align-items: center; gap: var(--spacing-sm); flex: 1;">
+                                <span class="research-icon">🤖</span>
+                                <h3>AI & Machine Learning</h3>
+                            </div>
+                            <svg class="expand-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
                         </div>
-                        <p>From integrating large language models into applications to building intelligent features that learn from user behavior, AI is transforming what software can do.</p>
-                        <div class="research-details">
-                            <h4>What we're exploring:</h4>
-                            <ul>
-                                <li>LLM integration patterns for mobile and web apps</li>
-                                <li>On-device ML with Core ML and Create ML</li>
-                                <li>AI-powered user experiences that feel natural</li>
-                                <li>Prompt engineering and retrieval-augmented generation</li>
-                            </ul>
-                        </div>
-                        <div class="research-tags-small">
-                            <span>OpenAI</span>
-                            <span>Claude API</span>
-                            <span>Core ML</span>
-                            <span>LangChain</span>
+                        <div class="research-card-content" style="display: none;">
+                            <p>From integrating large language models into applications to building intelligent features that learn from user behavior, AI is transforming what software can do.</p>
+                            <div class="research-details">
+                                <h4>What we're building with:</h4>
+                                <ul>
+                                    <li>LLM integration patterns for mobile and web apps</li>
+                                    <li>On-device ML with Core ML and Create ML</li>
+                                    <li>AI-powered user experiences that feel natural</li>
+                                    <li>Prompt engineering and retrieval-augmented generation</li>
+                                </ul>
+                            </div>
+                            <div class="research-tags-small">
+                                <span class="tag-gemini">Gemini</span>
+                                <span class="tag-claude">Claude API</span>
+                                <span class="tag-apple">Core ML</span>
+                                <span class="tag-azure">Azure AI Foundry</span>
+                                <span class="tag-perplexity">Perplexity</span>
+                            </div>
                         </div>
                     </article>
 
                     <!-- Cloud Architecture -->
-                    <article class="research-card">
-                        <div class="research-card-header">
-                            <span class="research-icon">☁️</span>
-                            <h3>Cloud-Native Architecture</h3>
+                    <article class="research-card expandable" data-expanded="false">
+                        <div class="research-card-header" role="button" tabindex="0">
+                            <div style="display: flex; align-items: center; gap: var(--spacing-sm); flex: 1;">
+                                <span class="research-icon">☁️</span>
+                                <h3>Cloud-Native Architecture</h3>
+                            </div>
+                            <svg class="expand-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
                         </div>
-                        <p>Building applications that scale requires understanding modern cloud infrastructure — not just how to use it, but how to design systems that leverage it efficiently.</p>
-                        <div class="research-details">
-                            <h4>What we're exploring:</h4>
-                            <ul>
-                                <li>Serverless architecture patterns and trade-offs</li>
-                                <li>Container orchestration with Kubernetes</li>
-                                <li>Event-driven systems and message queues</li>
-                                <li>Multi-region deployment strategies</li>
-                            </ul>
-                        </div>
-                        <div class="research-tags-small">
-                            <span>Azure</span>
-                            <span>AWS</span>
-                            <span>Docker</span>
-                            <span>Kubernetes</span>
+                        <div class="research-card-content" style="display: none;">
+                            <p>Building applications that scale requires understanding modern cloud infrastructure — not just how to use it, but how to design systems that leverage it efficiently.</p>
+                            <div class="research-details">
+                                <h4>What we're building with:</h4>
+                                <ul>
+                                    <li>Serverless architecture patterns and trade-offs</li>
+                                    <li>Container orchestration and deployment</li>
+                                    <li>Event-driven systems and message queues</li>
+                                    <li>Multi-region deployment strategies</li>
+                                </ul>
+                            </div>
+                            <div class="research-tags-small">
+                                <span class="tag-azure">Azure</span>
+                                <span class="tag-aws">AWS</span>
+                                <span class="tag-docker">Docker</span>
+                                <span class="tag-containers">Containers</span>
+                            </div>
                         </div>
                     </article>
 
                     <!-- Swift & Apple Platforms -->
-                    <article class="research-card">
-                        <div class="research-card-header">
-                            <span class="research-icon">🍎</span>
-                            <h3>Swift & Apple Platforms</h3>
+                    <article class="research-card expandable" data-expanded="false">
+                        <div class="research-card-header" role="button" tabindex="0">
+                            <div style="display: flex; align-items: center; gap: var(--spacing-sm); flex: 1;">
+                                <span class="research-icon">🍎</span>
+                                <h3>Swift & Apple Platforms</h3>
+                            </div>
+                            <svg class="expand-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
                         </div>
-                        <p>Apple's ecosystem continues to evolve rapidly. SwiftUI, async/await, and new frameworks create opportunities to build better apps with less code.</p>
-                        <div class="research-details">
-                            <h4>What we're exploring:</h4>
-                            <ul>
-                                <li>SwiftUI best practices and architecture patterns</li>
-                                <li>Swift concurrency and modern async patterns</li>
-                                <li>Cross-platform development (iOS, macOS, visionOS)</li>
-                                <li>App Clips, widgets, and system integration</li>
-                            </ul>
-                        </div>
-                        <div class="research-tags-small">
-                            <span>Swift</span>
-                            <span>SwiftUI</span>
-                            <span>Combine</span>
-                            <span>visionOS</span>
+                        <div class="research-card-content" style="display: none;">
+                            <p>Apple's ecosystem continues to evolve rapidly. SwiftUI, async/await, and new frameworks create opportunities to build better apps with less code.</p>
+                            <div class="research-details">
+                                <h4>What we're building with:</h4>
+                                <ul>
+                                    <li>SwiftUI best practices and architecture patterns</li>
+                                    <li>Swift concurrency and modern async patterns</li>
+                                    <li>Cross-platform development (iOS, macOS, visionOS)</li>
+                                    <li>App Clips, widgets, and system integration</li>
+                                </ul>
+                            </div>
+                            <div class="research-tags-small">
+                                <span class="tag-swift">Swift</span>
+                                <span class="tag-swift">SwiftUI</span>
+                                <span class="tag-apple">AVKit</span>
+                                <span class="tag-apple">VisionKit</span>
+                                <span class="tag-apple">AudioKit</span>
+                                <span class="tag-apple">CloudKit</span>
+                                <span class="tag-apple">HealthKit</span>
+                                <span class="tag-apple">MapKit</span>
+                                <span class="tag-apple">StoreKit</span>
+                            </div>
                         </div>
                     </article>
 
                     <!-- DevOps & Automation -->
-                    <article class="research-card">
-                        <div class="research-card-header">
-                            <span class="research-icon">⚙️</span>
-                            <h3>DevOps & Automation</h3>
+                    <article class="research-card expandable" data-expanded="false">
+                        <div class="research-card-header" role="button" tabindex="0">
+                            <div style="display: flex; align-items: center; gap: var(--spacing-sm); flex: 1;">
+                                <span class="research-icon">⚙️</span>
+                                <h3>DevOps & Automation</h3>
+                            </div>
+                            <svg class="expand-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
                         </div>
-                        <p>Shipping quality software quickly requires robust automation. CI/CD pipelines, infrastructure as code, and monitoring aren't optional — they're essential.</p>
-                        <div class="research-details">
-                            <h4>What we're exploring:</h4>
-                            <ul>
-                                <li>GitHub Actions for iOS/Android CI/CD</li>
-                                <li>Infrastructure as code with Terraform</li>
-                                <li>Automated testing strategies at scale</li>
-                                <li>Observability and monitoring patterns</li>
-                            </ul>
-                        </div>
-                        <div class="research-tags-small">
-                            <span>GitHub Actions</span>
-                            <span>Terraform</span>
-                            <span>Fastlane</span>
-                            <span>Datadog</span>
+                        <div class="research-card-content" style="display: none;">
+                            <p>Shipping quality software quickly requires robust automation. CI/CD pipelines, infrastructure as code, and monitoring aren't optional — they're essential.</p>
+                            <div class="research-details">
+                                <h4>What we're building with:</h4>
+                                <ul>
+                                    <li>GitHub Actions for iOS/Android CI/CD</li>
+                                    <li>Infrastructure as code with Terraform</li>
+                                    <li>Automated testing strategies at scale</li>
+                                    <li>Observability and monitoring patterns</li>
+                                </ul>
+                            </div>
+                            <div class="research-tags-small">
+                                <span class="tag-github">GitHub Actions</span>
+                                <span class="tag-fastlane">Fastlane</span>
+                                <span class="tag-apple">App Store Connect</span>
+                                <span class="tag-github">GitHub Packages</span>
+                                <span class="tag-azure">ACR</span>
+                                <span class="tag-microsoft">Windows Store</span>
+                                <span class="tag-google">Google Play</span>
+                            </div>
                         </div>
                     </article>
 
                     <!-- Data & Analytics -->
-                    <article class="research-card">
-                        <div class="research-card-header">
-                            <span class="research-icon">📊</span>
-                            <h3>Data & Analytics</h3>
+                    <article class="research-card expandable" data-expanded="false">
+                        <div class="research-card-header" role="button" tabindex="0">
+                            <div style="display: flex; align-items: center; gap: var(--spacing-sm); flex: 1;">
+                                <span class="research-icon">📊</span>
+                                <h3>Data & Analytics</h3>
+                            </div>
+                            <svg class="expand-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
                         </div>
-                        <p>Understanding how users interact with your product is critical. We invest in analytics infrastructure that provides actionable insights without compromising privacy.</p>
-                        <div class="research-details">
-                            <h4>What we're exploring:</h4>
-                            <ul>
-                                <li>Privacy-first analytics approaches</li>
-                                <li>A/B testing and experimentation frameworks</li>
-                                <li>Real-time data pipelines</li>
-                                <li>Business intelligence dashboards</li>
-                            </ul>
-                        </div>
-                        <div class="research-tags-small">
-                            <span>Mixpanel</span>
-                            <span>Amplitude</span>
-                            <span>BigQuery</span>
-                            <span>dbt</span>
+                        <div class="research-card-content" style="display: none;">
+                            <p>Understanding how users interact with your product is critical. We invest in analytics infrastructure that provides actionable insights without compromising privacy.</p>
+                            <div class="research-details">
+                                <h4>What we're building with:</h4>
+                                <ul>
+                                    <li>Privacy-first analytics approaches</li>
+                                    <li>A/B testing and experimentation frameworks</li>
+                                    <li>Real-time data pipelines</li>
+                                    <li>Business intelligence dashboards</li>
+                                </ul>
+                            </div>
+                            <div class="research-tags-small">
+                                <span class="tag-duckdb">DuckDB</span>
+                                <span class="tag-apple">Core Data</span>
+                                <span class="tag-swift">Swift Data</span>
+                                <span class="tag-powerbi">Power BI</span>
+                                <span class="tag-supabase">Supabase</span>
+                            </div>
                         </div>
                     </article>
 
                     <!-- Security -->
-                    <article class="research-card">
-                        <div class="research-card-header">
-                            <span class="research-icon">🔐</span>
-                            <h3>Security & Privacy</h3>
+                    <article class="research-card expandable" data-expanded="false">
+                        <div class="research-card-header" role="button" tabindex="0">
+                            <div style="display: flex; align-items: center; gap: var(--spacing-sm); flex: 1;">
+                                <span class="research-icon">🔐</span>
+                                <h3>Security & Privacy</h3>
+                            </div>
+                            <svg class="expand-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
                         </div>
-                        <p>Security isn't a feature — it's a foundation. We stay current on threats, best practices, and privacy regulations to build software people can trust.</p>
-                        <div class="research-details">
-                            <h4>What we're exploring:</h4>
-                            <ul>
-                                <li>Zero-trust architecture patterns</li>
-                                <li>Secure authentication flows (passkeys, WebAuthn)</li>
-                                <li>Data encryption at rest and in transit</li>
-                                <li>Privacy compliance (GDPR, CCPA, App Tracking Transparency)</li>
-                            </ul>
-                        </div>
-                        <div class="research-tags-small">
-                            <span>OAuth 2.0</span>
-                            <span>Passkeys</span>
-                            <span>Encryption</span>
-                            <span>GDPR</span>
+                        <div class="research-card-content" style="display: none;">
+                            <p>Security isn't a feature — it's a foundation. We stay current on threats, best practices, and privacy regulations to build software people can trust.</p>
+                            <div class="research-details">
+                                <h4>What we're building with:</h4>
+                                <ul>
+                                    <li>Zero-trust architecture patterns</li>
+                                    <li>Secure authentication flows (passkeys, WebAuthn)</li>
+                                    <li>Data encryption at rest and in transit</li>
+                                    <li>Privacy compliance (GDPR, CCPA, App Tracking Transparency)</li>
+                                </ul>
+                            </div>
+                            <div class="research-tags-small">
+                                <span class="tag-oauth">OAuth 2.0</span>
+                                <span class="tag-security">Passkeys</span>
+                                <span class="tag-security">Encryption</span>
+                                <span class="tag-hipaa">HIPAA</span>
+                                <span class="tag-gdpr">GDPR</span>
+                            </div>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section class="section technologies-section">
+        <!-- Quick Actions Section -->
+        <section class="section quick-actions-section">
             <div class="container">
-                <h2>Technologies We Work With</h2>
-                <p class="section-subtitle">Our current toolkit — proven through our own products and client work.</p>
+                <h2 style="text-align: center; margin-bottom: var(--spacing-xl);">Explore More</h2>
 
-                <div class="tech-categories">
-                    <div class="tech-category">
-                        <h3>Languages</h3>
-                        <div class="tech-list">
-                            <span>Swift</span>
-                            <span>Python</span>
-                            <span>JavaScript</span>
-                            <span>TypeScript</span>
-                            <span>SQL</span>
+                <div class="quick-actions-grid">
+                    <!-- GitHub -->
+                    <a href="https://github.com/okekedev" class="quick-action-card" target="_blank" rel="noopener noreferrer">
+                        <div class="quick-action-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="48" height="48">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
                         </div>
-                    </div>
+                        <h3>Research</h3>
+                        <p>Open source projects and code samples</p>
+                        <span class="quick-action-arrow">→</span>
+                    </a>
 
-                    <div class="tech-category">
-                        <h3>Frameworks</h3>
-                        <div class="tech-list">
-                            <span>SwiftUI</span>
-                            <span>UIKit</span>
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>FastAPI</span>
-                            <span>Django</span>
-                        </div>
-                    </div>
+                    <!-- Blog -->
+                    <a href="/blog/" class="quick-action-card">
+                        <div class="quick-action-icon">📝</div>
+                        <h3>Blog</h3>
+                        <p>Articles on AI automation and enterprise development</p>
+                        <span class="quick-action-arrow">→</span>
+                    </a>
 
-                    <div class="tech-category">
-                        <h3>Cloud & Infrastructure</h3>
-                        <div class="tech-list">
-                            <span>Azure</span>
-                            <span>AWS</span>
-                            <span>Firebase</span>
-                            <span>Vercel</span>
-                            <span>Docker</span>
-                            <span>PostgreSQL</span>
-                        </div>
-                    </div>
-
-                    <div class="tech-category">
-                        <h3>Tools</h3>
-                        <div class="tech-list">
-                            <span>Xcode</span>
-                            <span>VS Code</span>
-                            <span>Git</span>
-                            <span>Figma</span>
-                            <span>Linear</span>
-                            <span>Notion</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section cta-section">
-            <div class="container">
-                <div class="cta-block">
-                    <h2>Want to work together?</h2>
-                    <p>Whether you need help with a specific technology or want a partner who stays current, let's talk about your project.</p>
-                    <a href="/contact/" class="btn btn-primary btn-large">Get in Touch</a>
+                    <!-- Services -->
+                    <a href="/services/" class="quick-action-card">
+                        <div class="quick-action-icon">⚡</div>
+                        <h3>Services</h3>
+                        <p>See how we can help your business</p>
+                        <span class="quick-action-arrow">→</span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -303,15 +315,17 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <span class="footer-logo">Okeke LLC</span>
-                    <p>Building software. Helping businesses grow.</p>
+                    <p>Leverage technology to grow your business.</p>
                 </div>
                 <div class="footer-links">
                     <a href="/services/">Services</a>
                     <a href="/research/">Research</a>
+                    <a href="/blog/">Blog</a>
                     <a href="/apps/">Apps</a>
                     <a href="/about/">About</a>
                     <a href="/contact/">Contact</a>
-                    <a href="https://sundai.us" target="_blank" rel="noopener noreferrer">Portfolio</a>
+                    <a href="/privacy-policy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Service</a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -333,6 +347,34 @@
         const nav = document.querySelector('.nav');
         window.addEventListener('scroll', () => {
             nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Expandable Focus Area Cards
+        const expandableCards = document.querySelectorAll('.research-card.expandable');
+
+        expandableCards.forEach(card => {
+            const header = card.querySelector('.research-card-header');
+            const content = card.querySelector('.research-card-content');
+
+            header.addEventListener('click', () => {
+                const isExpanded = card.getAttribute('data-expanded') === 'true';
+
+                if (isExpanded) {
+                    card.setAttribute('data-expanded', 'false');
+                    content.style.display = 'none';
+                } else {
+                    card.setAttribute('data-expanded', 'true');
+                    content.style.display = 'block';
+                }
+            });
+
+            // Also make it accessible with Enter key
+            header.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    header.click();
+                }
+            });
         });
 
         // Snowfall Animation

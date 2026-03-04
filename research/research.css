@@ -96,15 +96,48 @@
     transition: all var(--transition);
 }
 
-.research-card:hover {
+.research-card.expandable {
+    cursor: pointer;
+}
+
+.research-card.expandable:hover {
     box-shadow: var(--shadow-md);
+    border-color: var(--color-primary);
+}
+
+.research-card.expandable[data-expanded="true"] {
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary);
 }
 
 .research-card-header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: var(--spacing-sm);
-    margin-bottom: var(--spacing-sm);
+    cursor: pointer;
+}
+
+.research-card-content {
+    margin-top: var(--spacing-md);
+}
+
+.research-card-content p {
+    color: var(--color-text-muted);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+}
+
+.expand-icon {
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+    color: var(--color-text-muted);
+}
+
+.research-card.expandable[data-expanded="true"] .expand-icon {
+    transform: rotate(180deg);
+    color: var(--color-primary);
 }
 
 .research-icon {
@@ -163,16 +196,60 @@
     gap: 0.5rem;
     padding-top: var(--spacing-sm);
     border-top: 1px solid var(--color-border-light);
+    margin-top: var(--spacing-md);
 }
 
 .research-tags-small span {
     font-size: 0.75rem;
-    font-weight: 500;
-    color: var(--color-text-muted);
-    background: var(--color-bg-alt);
-    padding: 0.25rem 0.625rem;
-    border-radius: 4px;
+    font-weight: 600;
+    padding: 0.375rem 0.875rem;
+    border-radius: 6px;
+    border: 1px solid;
 }
+
+/* Brand Colors for Technology Tags */
+.tag-openai { background: #10A37F; color: white; border-color: #10A37F; }
+.tag-claude { background: #7C3AED; color: white; border-color: #7C3AED; }
+.tag-apple { background: #000000; color: white; border-color: #000000; }
+.tag-swift { background: #F05138; color: white; border-color: #F05138; }
+.tag-langchain { background: #1C3C3C; color: white; border-color: #1C3C3C; }
+.tag-azure { background: #0078D4; color: white; border-color: #0078D4; }
+.tag-aws { background: #FF9900; color: white; border-color: #FF9900; }
+.tag-docker { background: #2496ED; color: white; border-color: #2496ED; }
+.tag-kubernetes { background: #326CE5; color: white; border-color: #326CE5; }
+.tag-github { background: #24292E; color: white; border-color: #24292E; }
+.tag-terraform { background: #7B42BC; color: white; border-color: #7B42BC; }
+.tag-fastlane { background: #00D762; color: white; border-color: #00D762; }
+.tag-datadog { background: #632CA6; color: white; border-color: #632CA6; }
+.tag-mixpanel { background: #7856FF; color: white; border-color: #7856FF; }
+.tag-amplitude { background: #2C5EA8; color: white; border-color: #2C5EA8; }
+.tag-google { background: #4285F4; color: white; border-color: #4285F4; }
+.tag-dbt { background: #FF694B; color: white; border-color: #FF694B; }
+.tag-oauth { background: #4B8BBE; color: white; border-color: #4B8BBE; }
+.tag-security { background: #28A745; color: white; border-color: #28A745; }
+.tag-gdpr { background: #0033A0; color: white; border-color: #0033A0; }
+.tag-hipaa { background: #0072C6; color: white; border-color: #0072C6; }
+.tag-duckdb { background: #FFF000; color: #000; border-color: #FFF000; }
+.tag-powerbi { background: #F2C811; color: #000; border-color: #F2C811; }
+.tag-supabase { background: #3ECF8E; color: white; border-color: #3ECF8E; }
+.tag-containers { background: #0DB7ED; color: white; border-color: #0DB7ED; }
+.tag-gemini { background: #8E75B2; color: white; border-color: #8E75B2; }
+.tag-perplexity { background: #20808D; color: white; border-color: #20808D; }
+.tag-microsoft { background: #00A4EF; color: white; border-color: #00A4EF; }
+.tag-python { background: #3776AB; color: white; border-color: #3776AB; }
+.tag-javascript { background: #F7DF1E; color: #000; border-color: #F7DF1E; }
+.tag-typescript { background: #3178C6; color: white; border-color: #3178C6; }
+.tag-sql { background: #4479A1; color: white; border-color: #4479A1; }
+.tag-react { background: #61DAFB; color: #000; border-color: #61DAFB; }
+.tag-node { background: #339933; color: white; border-color: #339933; }
+.tag-firebase { background: #FFCA28; color: #000; border-color: #FFCA28; }
+.tag-vercel { background: #000000; color: white; border-color: #000000; }
+.tag-postgresql { background: #336791; color: white; border-color: #336791; }
+.tag-vscode { background: #007ACC; color: white; border-color: #007ACC; }
+.tag-git { background: #F05032; color: white; border-color: #F05032; }
+.tag-figma { background: #F24E1E; color: white; border-color: #F24E1E; }
+.tag-linear { background: #5E6AD2; color: white; border-color: #5E6AD2; }
+.tag-notion { background: #000000; color: white; border-color: #000000; }
 
 /* Technologies Section */
 .technologies-section {
@@ -250,6 +327,218 @@
     color: var(--color-text);
 }
 
+/* Technical Skills Section */
+.technical-skills-section {
+    background: var(--color-bg-alt);
+}
+
+.technical-skills-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: white;
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.technical-skills-toggle:hover {
+    border-color: var(--color-primary);
+    background: var(--color-bg-alt);
+}
+
+.technical-skills-toggle.expanded {
+    border-color: var(--color-primary);
+    background: var(--color-primary);
+    color: white;
+}
+
+.technical-skills-toggle .toggle-icon {
+    transition: transform 0.3s ease;
+}
+
+.technical-skills-toggle.expanded .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.technical-skills-content {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-lg);
+    background: white;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+}
+
+/* Articles Section */
+.articles-section {
+    background: var(--color-bg);
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-lg);
+}
+
+.article-card {
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all var(--transition);
+}
+
+.article-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+}
+
+.article-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: var(--color-bg-alt);
+}
+
+.article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.article-card:hover .article-image img {
+    transform: scale(1.05);
+}
+
+.article-content {
+    padding: var(--spacing-lg);
+}
+
+.article-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.article-meta time {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+}
+
+.article-content h3 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text);
+}
+
+.article-content p {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+}
+
+.article-link {
+    display: inline-block;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    transition: all var(--transition);
+}
+
+.article-link:hover {
+    color: var(--color-primary-hover);
+    transform: translateX(4px);
+}
+
+.coming-soon-article {
+    background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
+    border: 2px dashed var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coming-soon-article .coming-soon-badge {
+    display: inline-block;
+}
+
+/* Quick Actions Section */
+.quick-actions-section {
+    background: var(--color-bg);
+}
+
+.quick-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.quick-action-card {
+    position: relative;
+    padding: var(--spacing-xl);
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    transition: all var(--transition);
+    text-decoration: none;
+    color: inherit;
+}
+
+.quick-action-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary);
+    transform: translateY(-4px);
+}
+
+.quick-action-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary);
+}
+
+.quick-action-icon svg {
+    color: var(--color-primary);
+}
+
+.quick-action-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-text);
+}
+
+.quick-action-card p {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+}
+
+.quick-action-arrow {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    transition: transform var(--transition);
+    display: inline-block;
+}
+
+.quick-action-card:hover .quick-action-arrow {
+    transform: translateX(8px);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .research-grid {
@@ -258,5 +547,18 @@
 
     .philosophy-block {
         padding: var(--spacing-md);
+    }
+
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .technical-skills-toggle {
+        font-size: 1rem;
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+
+    .quick-actions-grid {
+        grid-template-columns: 1fr;
     }
 }
