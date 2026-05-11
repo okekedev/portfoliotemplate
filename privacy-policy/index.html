@@ -65,16 +65,40 @@
             <ul>
                 <li><strong>Website visitors:</strong> We may collect anonymous analytics data (page views, browser type, general location) to improve our website.</li>
                 <li><strong>Contact form submissions:</strong> Name, email, and message content when you reach out to us.</li>
-                <li><strong>App users:</strong> Each app has its own specific privacy policy detailed below.</li>
+                <li><strong>App account information:</strong> Name, email, business details, and credentials you provide when creating an account in one of our applications.</li>
+                <li><strong>Connected platform data (OAuth):</strong> When you authorize one of our apps to connect to a third-party platform — including Meta (Facebook Pages and Instagram Business accounts), LinkedIn, Google (Business Profile, Search Console, Analytics), and Stripe — we receive an access token and the specific data you grant during the consent flow. We never receive or store your passwords for these services.</li>
+                <li><strong>App-specific data:</strong> Each app has its own privacy policy detailed below with the full breakdown of features and data handling.</li>
             </ul>
 
             <h2>How We Use Your Information</h2>
             <ul>
                 <li>To respond to your inquiries and provide customer support</li>
                 <li>To improve our website and applications</li>
+                <li>To operate the features you authorize — for example, publishing posts to your connected Facebook Page or Instagram Business account on your behalf, reading engagement metrics for posts we created, or pulling analytics from accounts you've connected</li>
                 <li>To send occasional updates if you've opted in</li>
                 <li>To comply with legal obligations</li>
             </ul>
+
+            <h2>Connected Platforms &amp; OAuth Permissions</h2>
+            <p>Our applications use OAuth to integrate with platforms you choose to connect. Each connection is initiated by you through the platform's official consent screen, which lists the specific permissions our app is requesting. The permissions we use and what we do with them:</p>
+            <ul>
+                <li><strong>Meta (Facebook &amp; Instagram):</strong> We request permissions such as <em>pages_show_list</em>, <em>pages_manage_posts</em>, <em>pages_read_engagement</em>, <em>instagram_basic</em>, and <em>instagram_content_publish</em>. These let our apps list the Facebook Pages you administer, publish posts you compose, and read engagement metrics for those posts. We only act on Pages and Instagram Business accounts you explicitly choose.</li>
+                <li><strong>LinkedIn:</strong> We request permissions to list the Company Pages you administer and publish posts you compose. We only post to pages you've selected.</li>
+                <li><strong>Google (Business Profile, Search Console, Analytics):</strong> We request read access (and write access where applicable for Business Profile updates) to the specific properties you connect.</li>
+                <li><strong>Stripe:</strong> We request read access to customer records to import them as contacts when you authorize the import. We never initiate charges or modify your Stripe account.</li>
+            </ul>
+            <p>Access tokens for connected platforms are encrypted at rest. You can disconnect any platform at any time from the Connections page in the app, or by revoking access on the platform's own settings page (for example, Facebook &gt; Settings &gt; Apps and Websites). When you disconnect, we delete the associated access tokens.</p>
+
+            <h2>Data Sharing</h2>
+            <p>We do not sell your personal information. We share data only as follows:</p>
+            <ul>
+                <li><strong>Connected platforms:</strong> When you authorize an action (e.g., publishing a post), we send the necessary content to that platform's API.</li>
+                <li><strong>Service providers:</strong> Cloud hosting (Microsoft Azure), email delivery, and AI providers (Anthropic, Google) that help us operate the apps. These providers process data on our behalf under their own privacy commitments and do not retain your business data beyond what is required to fulfill the request.</li>
+                <li><strong>Legal obligations:</strong> When required by law, subpoena, or to protect our rights.</li>
+            </ul>
+
+            <h2>Data Security &amp; Retention</h2>
+            <p>We use industry-standard security measures including TLS for data in transit, AES-256-GCM encryption for stored credentials and OAuth tokens, and managed identity for cloud resource access. We retain your data for as long as your account is active. You may request deletion at any time and we will process the request within 30 days.</p>
 
             <h2>App-Specific Privacy Policies</h2>
             <p>Each of our applications has its own privacy policy tailored to its specific features and data practices:</p>
@@ -104,7 +128,7 @@
             <p><strong>Email:</strong> privacy@okeke.us<br>
             <strong>Address:</strong> Okeke LLC, United States</p>
 
-            <p class="last-updated">Last updated: February 18, 2026</p>
+            <p class="last-updated">Last updated: May 11, 2026</p>
         </div>
     </main>
 
