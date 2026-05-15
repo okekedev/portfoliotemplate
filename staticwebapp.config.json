@@ -28,6 +28,16 @@
       "route": "/contact",
       "redirect": "/contact/",
       "statusCode": 301
+    },
+    {
+      "route": "/sapphire",
+      "redirect": "/sapphire/",
+      "statusCode": 301
+    },
+    {
+      "route": "/sapphire/eula",
+      "redirect": "/sapphire/eula/",
+      "statusCode": 301
     }
   ],
   "responseOverrides": {
